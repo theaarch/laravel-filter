@@ -1,0 +1,43 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Database\Eloquent\Builder;
+use Theaarch\Filterable\AbstractFilter;
+
+class {{ class }} extends AbstractFilter
+{
+    /**
+     * Registered filters to operate upon.
+     *
+     * @var array<string>
+     */
+    protected array $filters = [
+        'id',
+        'name',
+    ];
+
+    /**
+     * Filter the query by a given attribute value.
+     *
+     * @param string $value
+     *
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    protected function id(string $value): Builder
+    {
+        return $this->builder->where('id', $value);
+    }
+
+    /**
+     * Filter the query by a given attribute value.
+     *
+     * @param string $value
+     *
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    protected function name(string $value): Builder
+    {
+        return $this->builder->whereLike('name', "%$value%");
+    }
+}
