@@ -3,9 +3,9 @@
 namespace {{ namespace }};
 
 use Illuminate\Database\Eloquent\Builder;
-use Theaarch\Filterable\AbstractFilter;
+use Theaarch\Filterable\Filter;
 
-class {{ class }} extends AbstractFilter
+class {{ class }} extends Filter
 {
     /**
      * Registered filters to operate upon.
