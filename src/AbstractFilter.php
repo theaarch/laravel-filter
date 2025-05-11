@@ -14,6 +14,9 @@ use Illuminate\Support\Str;
 use Psr\Log\LoggerInterface;
 use Theaarch\Filterable\Contracts\Filter as FilterContract;
 
+/**
+ * @deprecated
+ */
 abstract class AbstractFilter implements FilterContract
 {
     /**
